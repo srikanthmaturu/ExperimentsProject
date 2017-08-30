@@ -18,5 +18,7 @@ INCLUDE_DIRECTORIES(${CMAKE_HOME_DIRECTORY}/include/
 ADD_EXECUTABLE(extract_kmers_from_kcfiles src/extractKMERSFromKCFiles.cpp)
 MESSAGE("Target extract_kmers_from_kcfiles created.")
 
+ADD_EXECUTABLE(generate_query_file src/generateQueryFile.cpp)
+MESSAGE("Target generate_query_file created.")
 
 
