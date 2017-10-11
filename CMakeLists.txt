@@ -21,4 +21,6 @@ MESSAGE("Target extract_kmers_from_kcfiles created.")
 ADD_EXECUTABLE(generate_query_file src/generateQueryFile.cpp)
 MESSAGE("Target generate_query_file created.")
 
+ADD_EXECUTABLE(brute_force_edit_distance src/bruteForceEditDistance.cpp)
+MESSAGE("Target BruteForce Edit Distance created.")
 
