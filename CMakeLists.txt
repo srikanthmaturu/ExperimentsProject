@@ -22,3 +22,5 @@ ADD_EXECUTABLE(generate_query_file src/generateQueryFile.cpp)
 MESSAGE("Target generate_query_file created.")
 
 
+ADD_EXECUTABLE(bruteForceEditDistance src/bruteForceEditDistance.cpp)
+MESSAGE("Target bruteForceEditDistance created.")
