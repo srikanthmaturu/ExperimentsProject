@@ -72,19 +72,20 @@ uint64_t doBruteForce(string databaseFile, string queryFile, uint64_t maxED){
     load_sequences(databaseFile, database_kmers);
     load_sequences(queryFile, query_kmers);
     uint64_t count = 0;
-    //#pragma omp parallel
+    //#pragma omp parallels
     for(uint64_t i = 0; i < query_kmers.size(); i++){
         cout << ">" << query_kmers[i]  << endl;
         for(uint64_t j = 0; j < database_kmers.size(); j++){
-            uint64_t editDistance = uiLevenshteinDistance(database_kmers[i], query_kmers[j]);
+            uint64_t editDistance = uiLevenshteinDistance(database_kmers[j], query_kmers[i]);
             if(editDistance <= maxED){
                 count++;
                 cout << database_kmers[j] << " " << editDistance <<  endl;
             }
         }
-        cout << "Query " << i << " Current count: " << count << endl;
+        //cout << "Query " << i << " Current count: " << count << endl;
     }
     cout << "Total Number of similar kmers for all queries: " << count << endl;
+    return count;
 }
 
 int main(int argc, char** argv){
